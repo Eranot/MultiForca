@@ -5,6 +5,13 @@ import os
 import time
 
 
+def show_logo():
+	print(" _    _   _   _   _     _____   _   _____   ______   _____   ____   _____")
+	print("| \  / | | | | | | |   |_   _| | | | ___ | |  __  | |  ___| |  __| |     |")
+	print("| _\/_ | | |_| | | |__   | |   | | | ___|  | |__| | |   \_  | |__  |  _  |")
+	print("|_|  |_| |_____| |____|  |_|   |_| |_|     |______| |_|\__| |____| |_| |_|")
+
+
 def flush_input():
 	try:
 		import sys, termios
@@ -32,7 +39,7 @@ minhapalavra = sock.recv(1024)
 fim = 1;
 while(fim):
 	os.system("cls")
-	
+	show_logo()
 	placar = sock.recv(1024)
 	if(placar.startswith("fim de jogo")):
 		break
