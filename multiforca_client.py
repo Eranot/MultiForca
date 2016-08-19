@@ -60,7 +60,7 @@ while(fim):
 	if(ret == "É a sua vez de jogar: "):
 		time.sleep(0.001)
 		flush_input()
-		sock.send(raw_input("\nEscolha uma letra ou chute a palavra: "))
+		sock.send(raw_input("\nEscolha uma letra ou chute a palavra: ").lower())
 		minhapalavra = sock.recv(1024)
 
 	else:

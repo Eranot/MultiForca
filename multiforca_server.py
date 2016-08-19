@@ -36,7 +36,7 @@ for i in range(num_jogadores):
     lista_jogadores.append(jogador(nome, conn, addr))
     print(lista_jogadores[i].nome + " se conectou.")
 
-palavra = raw_input("Escolha a palavra: ")
+palavra = raw_input("Escolha a palavra: ").lower()
 
 #SETANDO AS CONFIGURAÇÕES DE CADA JOGADOR
 branco = ''
