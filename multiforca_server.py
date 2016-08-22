@@ -12,6 +12,10 @@ class jogador():
         self.pontos = 0
         self.palavra = ''
 
+def limpar():
+	os.system('cls' if os.name == 'nt' else 'clear')
+
+
 #LIDANDO COM A SOCKET
 sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 
@@ -55,7 +59,7 @@ for j in range(num_jogadores):
     lista_jogadores[j].conn.send(branco)  # MANDANDO O BRANCO
 
 fim = 1
-os.system("cls")
+limpar()
 
 while(fim):
     for i in range(num_jogadores):

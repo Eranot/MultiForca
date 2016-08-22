@@ -21,6 +21,8 @@ def flush_input():
 		while msvcrt.kbhit():
 			msvcrt.getch()
 
+def limpar():
+	os.system('cls' if os.name == 'nt' else 'clear')
 
 nome = raw_input("Nome: ")
 
@@ -38,7 +40,7 @@ minhapalavra = sock.recv(1024)
 
 fim = 1;
 while(fim):
-	os.system("cls")
+	limpar()
 	show_logo()
 	placar = sock.recv(1024)
 	if(placar.startswith("fim de jogo")):
